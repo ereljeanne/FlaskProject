@@ -17,6 +17,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>FlaskProject</Name>
     <RootNamespace>FlaskProject</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,12 +28,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskProject\Models\QueryFormStructure.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FlaskProject\__init__.py" />
     <Compile Include="FlaskProject\views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FlaskProject\" />
+    <Folder Include="FlaskProject\Models\" />
     <Folder Include="FlaskProject\static\" />
     <Folder Include="FlaskProject\static\content\" />
     <Folder Include="FlaskProject\static\fonts\" />
@@ -40,7 +45,10 @@
     <Folder Include="FlaskProject\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskProject\templates\login.html" />
     <Content Include="FlaskProject\templates\Photos.html" />
+    <Content Include="FlaskProject\templates\query.html" />
+    <Content Include="FlaskProject\templates\register.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskProject\static\content\bootstrap.css" />
     <Content Include="FlaskProject\static\content\bootstrap.min.css" />

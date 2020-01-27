@@ -1,3 +1,5 @@
 Flask
 Pandas
-Maplotlib
+MatPlotLib
+Flask_wtf
+requests
